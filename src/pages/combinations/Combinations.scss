@@ -1,0 +1,78 @@
+@use "../../styles/main.scss" as *;
+
+.comb-page {
+  padding: 2rem;
+  text-align: center;
+
+  .title {
+    font-family: $font-chewy;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .comb-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .comb-card {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    //background-color: transparent;
+    background-color: #fff;
+    //border: 5px solid transparent;
+
+    &:hover {
+      transform: scale(1.05); // Slight zoom effect
+      //border: 5px solid $BeanSoftWhite-color; //Add a border on hover
+      //background-color: rgba($color: #feffd8, $alpha: 1.0);
+    }
+
+    h3 {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: $BeanMintGreen-color;
+    }
+  }
+
+  .comb-description {
+    font-family: $font-baloo;
+    font-size: 1rem;
+    color: $BeanSalmonDark-color;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /*Mobile reactivity section*/
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+
+    .comb-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .comb-description {
+      font-size: 0.8rem;
+      line-height: 1;
+    }
+
+    .comb-card {
+      h3 {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr); /* Exactly 2 cards per row on small mobile screens */
+  }
+
+}

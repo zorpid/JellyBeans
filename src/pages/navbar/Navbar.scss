@@ -1,0 +1,81 @@
+/* Navbar styles */
+
+@use "../../styles/main.scss" as *;
+
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $BeanSalmon-color;
+  padding: 2rem 0;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+  .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    a {
+      .navbar-logo-img {
+        width: 80px;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    a {
+      text-decoration: none;
+      color: $BeanSoftWhite-color;
+      transition: color 0.3s;
+      text-transform: capitalize;
+
+      &:hover {
+        color: $BeanPink-color;
+      }
+    }
+  }
+  
+
+   // Mobile responsiveness
+   @media (max-width: 768px) {
+    flex-direction: column; 
+    padding: 1rem 0;
+
+    .navbar-links {
+      flex-direction: column; 
+      display: flex;
+      gap: 1.5rem; 
+      margin-top: 1rem;
+      font-size: 1.2rem; 
+    }
+
+    .navbar-logo {
+      margin-bottom: 1.5rem; 
+    }
+
+  }
+
+  @media (max-width: 480px) {
+    .navbar-logo a .navbar-logo-img {
+      width: 60px;
+    }
+
+    .navbar-links {
+      font-size: 1rem; 
+    }
+  }
+}
+

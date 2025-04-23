@@ -1,0 +1,53 @@
+@use "../../styles/main.scss" as *;
+
+.history-page {
+  padding: 2rem;
+  text-align: center;
+
+  .title {
+    font-family: $font-chewy;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: $BeanSalmonDark-color; 
+  }
+
+  .history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 2-3 cards per row on tablets */
+    }
+  }
+
+  .history-card {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: $BeanSoftWhite-color;
+    border: 5px solid transparent;
+
+    &:hover {
+      transform: scale(1.05); // Slight zoom effect
+      border: 5px solid $BeanSoftWhite-color; // Add a border on hover
+      //background-color: rgba($color: #feffd8, $alpha: 1.0);
+    }
+
+    h3 {
+      //font-family: $font-primary;
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+      color: $BeanMintGreen-color;
+    }
+
+    .history-description {
+      //font-family: $font-chewy;
+      font-size: 1rem;
+      color: $BeanSalmon-color;
+      line-height: 1.5;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use "../../styles/main.scss" as *;
+
+.combinations-info-section {
+    display: flex;
+    /* Flexbox to have the picture and text side by side */
+    align-items: center;
+    padding: 2rem;
+
+    .image-container {
+        flex: 1;
+        /* 50% of the width */
+        max-width: 40%;
+        order: 1;
+        /* Ensure image appears first */
+
+        a {
+            display: inline-block;
+
+            img {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            &:hover img {
+                transform: scale(1.05);
+            }
+        }
+
+        img {
+            width: 70%;
+            /* Adapt the picture size in its container */
+            height: auto;
+            border-radius: 600px;
+            /* Make the picture round */
+            object-fit: cover;
+        }
+    }
+
+    .text-container {
+        flex: 1;
+        /* 50% of the width */
+        padding: 1rem;
+        order: 2;
+        /* Ensure image appears second */
+
+        p {
+            line-height: 1.8;
+        }
+    }
+
+    /*Mobile reactivity section*/
+    @media (max-width: 768px) {
+        //flex-direction: column; //Removed the vertical layout so the image doesnt change place
+        text-align: center;
+        .image-container {
+            max-width: 50%;
+            img {
+                object-fit: contain;
+            }
+        }
+        p {
+            font-size: 1rem; //New fontsize for mobiles
+        }
+        h1 {
+            font-size: 1.5rem; //New fontsize for mobiles
+        }
+    }
+
+    /*Smaller mobile reactivity section*/
+    @media (max-width: 480px) {
+        //flex-direction: column; //Removed the vertical layout so the image doesnt change place
+        text-align: center;
+        .image-container {
+            max-width: 50%;
+            img {
+                object-fit: contain;
+            }
+        }
+        p {
+            font-size: 0.8rem; //New fontsize for even smaller mobiles
+        }
+        h1 {
+            font-size: 1.2rem; //New fontsize for even smaller mobiles
+        }
+    }
+}

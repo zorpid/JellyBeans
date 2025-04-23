@@ -1,0 +1,111 @@
+@use "../../styles/main.scss" as *;
+
+.recipe-page {
+  padding: 2rem;
+  text-align: center;
+  background-color: $primary-color;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    color: $BeanSalmonDark-color;
+  }
+
+  .title {
+    font-family: $font-chewy;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .recipe-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+
+    .recipe-link {
+      display: flex; 
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .recipe-card-image {
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05); // Slight zoom effect
+    }
+
+    .recipe-card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; //Pushes the content to the sides
+      flex-grow: 1;
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.25rem;
+        color: $BeanMintGreen-color;
+        margin-bottom: 0.5rem;
+      }
+
+      .recipes-description {
+        flex-grow: 1; // lets the description take up space 
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .recipes-totaltime,
+      .recipes-amount {
+        font-size: 0.9rem;
+        color: $BeanSalmonDark-color;
+      }
+
+      .recipes-totaltime {
+        margin-top: auto; // Puts this element at the bottom 
+      }
+    }
+
+  }
+
+  .recipe-description {
+    font-family: $font-chewy;
+    font-size: 1rem;
+    color: $BeanSalmonDark-color;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  img {
+    width: 600px;
+    max-width: 100%
+      /* make the picture responsive */
+  }
+
+  h2,
+  h3 {
+    color: $BeanMintGreen-color;
+  }
+}

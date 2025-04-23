@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Chewy&display=swap');
+
+// Fonts
+$font-baloo: 'Baloo 2', cursive;  // For body and general text
+$font-chewy: 'Chewy', cursive;      // For playful headers or links
+
+// Colors
+//$primary-color: #fae6c0;
+$primary-color: #fce1e4; // Pink for background
+$BeanPink-color: #ca4f30; // Hover text 
+$BeanNavy-color: #2A3D45; // Footer nav (not used at the moment)
+//$BeanMintGreen-color: #66D19E; // Text
+$BeanMintGreen-color: #E43D12; // Header text for cards
+$BeanSoftWhite-color: #F5F5F5; // Displaybox background
+$BeanOrange-color: #f4e7ce; // Background
+$BeanSalmon-color: #ee9085;
+$BeanSalmonDark-color: #f46c5d;
+//$BeanOrange-color: #FFE5B4; 
+
+// $primary-color: #d5ead6 camilla mintgrön
+// $primary-color: #e6f4e7 camilla2 ljus mintgrön
+// $primary-color: #f7e7e2; camilla ljusrosa
+// $primary-color: #e5eef7; camilla ljusblå
+
+// $primary-color: #f7e7e2; //Alex ljusrosa för bakgrund
+// $BeanMintGreen-color: #E43D12; // Alex val för text röd
+// $BeanNavy-color: #e6f4e7; // Mintgrön för navbar/footer?
+
+body, html {
+  font-family: $font-baloo;
+  background-color: $primary-color;
+  //overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;  /* Make sure the body is covering the whole width */
+}
+
+h1, h2, h3 {
+  font-family: $font-chewy;
+}
+
+.navbar-links a {
+  font-family: $font-chewy;
+  font-size: 1.5rem;
+  color: $BeanSoftWhite-color;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $BeanPink-color;
+  }
+}
+
+#root {
+  margin: 0; /* Remove the center alignment */
+  text-align: center;
+  width: 100%;
+  height: 100%; /* Strech the entire height of body */
+  box-sizing: border-box; /* Include padding in the height and width */
+}
+.app-container{
+  background-color: $primary-color;
+  display: flex;
+  height: auto;
+//     flex-direction: column;
+//     min-height: 100vh;
+}
+

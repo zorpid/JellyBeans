@@ -1,0 +1,136 @@
+@use "../../styles/main.scss" as *;
+
+.app-container {
+  width: 100%;
+  /* Fill all width */
+  height: 100%;
+  /* Fill all height */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* Handle padding */
+}
+
+.footer {
+  background-color: $BeanSalmon-color;
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: auto;
+
+  box-shadow: 5px 4px 10px black; // Some shadow
+  position: relative;
+  z-index: 2;
+
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+      flex: 1;
+      text-align: center;
+
+      p {
+        color: $BeanSoftWhite-color;
+        font-size: 20px;
+      }
+
+      a {
+        outline-color: transparent;
+      }
+
+      a:link {
+        color: $BeanSoftWhite-color;
+      }
+
+      a:visited {
+        color: $BeanSoftWhite-color;
+      }
+
+      a:focus {
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: $BeanPink-color;
+      }
+
+    }
+  }
+
+  .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    a {
+      .navbar-logo-img {
+        width: 200px;
+        /* Bigger logo */
+        height: auto;
+        object-fit: contain;
+        /* Prevent image distortion */
+      }
+
+      .navbar-logo-img:hover {
+        animation: tilt-shaking 0.3s infinite; //Make the image shake oh hover
+      }
+    }
+  }
+
+  /*Mobile reactivity section*/
+  @media (max-width: 768px) {
+    .footer-content {
+
+      .footer-left,
+      .footer-middle,
+      .footer-right {
+    p {
+      font-size: 1rem; //New fontsize for mobiles
+    }
+  }
+}
+  }
+
+  /*Smaller mobile reactivity section*/
+  @media (max-width: 480px) {
+    .footer-content {
+
+      .footer-left,
+      .footer-middle,
+      .footer-right {
+        p {
+          font-size: 0.8rem; //New fontsize for even smaller mobiles
+        }
+      }
+    }
+  }
+}
+
+/*Animation for shaking jar of beans*/
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0eg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
