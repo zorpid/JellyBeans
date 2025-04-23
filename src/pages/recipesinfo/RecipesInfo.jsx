@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import "./recipesInfo.scss"
+import info from '../../assets/recipe.png';
 
 const RecipesInfo = () => {
   return (
     <div className="recipes-info-section">
       <div className="image-container">
         <Link to="/Recipes">
-          <img src="/src/assets/recipe.png" alt="Click to view recipes"/>
+          <img src={info}  alt="Click to view recipes"/>
         </Link>
       </div>
       <div className="text-container">

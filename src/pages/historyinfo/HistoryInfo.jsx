@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HistoryInfo.scss';
+import img from '../../assets/history3.png';
+
 
 function HistoryInfo() {
   return (
@@ -14,7 +16,7 @@ function HistoryInfo() {
       </div>
       <div className="image-container">
         <Link to="/History">
-          <img src="/src/assets/history3.png" alt="click to explore history" />
+          <img src={img} alt="click to explore history" />
         </Link>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './BeansInfo.scss';
-
+import img from '../../assets/beans3.png';
 function BeansInfo() {
   return (
     <div className="beans-info-section">
@@ -15,7 +15,7 @@ function BeansInfo() {
       </div>
       <div className="image-container">
         <Link to="/Beans">
-          <img src="/src/assets/beans3.png" alt="click to explore beans" />
+          <img src={img}  alt="click to explore beans" />
         </Link>
       </div>
     </div>

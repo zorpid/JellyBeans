@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import './CombinationsInfo.scss';
+import img from '../../assets/combinations.png';
+
 
 function CombinationsInfo() {
     return (
@@ -15,7 +17,7 @@ function CombinationsInfo() {
           </div>
           <div className="image-container">
             <Link to="/Combinations">
-              <img src="/src/assets/combinations.png" alt="click for combinations"/>
+              <img src={img} alt="click for combinations"/>
             </Link>
           </div>
         </div>
